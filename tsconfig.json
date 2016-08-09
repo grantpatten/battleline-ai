@@ -1,0 +1,16 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5"
+  },
+  "files": [
+    "typings/index.d.ts",
+    "src/index.ts"
+  ]
+}

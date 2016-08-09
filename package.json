@@ -1,0 +1,25 @@
+{
+  "name": "battleline-ai",
+  "version": "1.0.0",
+  "description": "AI for playing the card game Battleline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grantpatten/battleline-ai.git"
+  },
+  "author": "Grant Patten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grantpatten/battleline-ai/issues"
+  },
+  "homepage": "https://github.com/grantpatten/battleline-ai#readme",
+  "devDependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^4.14.2",
+    "tslint": "^3.14.0",
+    "typescript": "^1.8.10"
+  }
+}
