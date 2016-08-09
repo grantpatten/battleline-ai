@@ -32,7 +32,6 @@ export class Card {
 
 export class CommandParser extends EventEmitter {
   parseEvent(command: string) {
-    console.log(`parsing event: ${command}`);
 
     if (!command) {
       return;
