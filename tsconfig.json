@@ -9,8 +9,13 @@
     "inlineSources": true,
     "target": "es5"
   },
-  "files": [
+  "include": [
     "typings/index.d.ts",
-    "src/index.ts"
+    "src/**/*",
+    "spec/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }

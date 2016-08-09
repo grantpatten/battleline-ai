@@ -4,7 +4,10 @@
   "description": "AI for playing the card game Battleline",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && tsc",
+    "lint": "tslint src/**/*.ts",
+    "typings": "typings install",
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,9 @@
   "homepage": "https://github.com/grantpatten/battleline-ai#readme",
   "devDependencies": {
     "commander": "^2.9.0",
+    "jasmine": "^2.4.1",
     "lodash": "^4.14.2",
+    "rimraf": "^2.5.4",
     "tslint": "^3.14.0",
     "typescript": "^1.8.10"
   }
