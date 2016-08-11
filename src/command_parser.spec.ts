@@ -1,4 +1,4 @@
-import {CommandParser, Card, BattlelineEvent, Position} from "../src/command_parser";
+import {CommandParser, Card, BattlelineEvent, Position} from "./command_parser";
 
 describe("Cards", () => {
   it("should parse new cards", () => {
