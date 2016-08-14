@@ -9,8 +9,7 @@
     "lint": "tslint src/**/*.ts spec/**/*.ts",
     "typings": "typings install",
     "test": "istanbul cover jasmine-runner.js",
-    "postinstall": "npm run typings && npm run build",
-    "coveralls": "istanbul-coveralls --no-rm"
+    "postinstall": "npm run typings && npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,8 +23,8 @@
   "homepage": "https://github.com/grantpatten/battleline-ai#readme",
   "devDependencies": {
     "commander": "^2.9.0",
+    "coveralls": "^2.11.12",
     "istanbul": "^0.4.4",
-    "istanbul-coveralls": "^1.0.3",
     "jasmine": "^2.4.1",
     "jasmine-spec-reporter": "^2.5.0",
     "lodash": "^4.14.2",
