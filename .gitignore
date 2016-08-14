@@ -2,6 +2,9 @@
 dist
 typings
 
+# Coverage reports
+coverage
+
 # Logs
 logs
 *.log
