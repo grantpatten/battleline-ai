@@ -17,6 +17,8 @@ jasmine.loadConfig({
 });
 
 jasmine.configureDefaultReporter({print: noop});    // remove default reporter logs
-jasmine.addReporter(new SpecReporter());
+jasmine.addReporter(new SpecReporter({
+  displayStacktrace: 'all'
+}));
 
 jasmine.execute();
