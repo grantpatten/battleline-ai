@@ -10,35 +10,20 @@ describe("Game State", () => {
   });
 
   it("should initialize the game with no cards played", () => {
-    expect(gameState.playedCards.length).toEqual(2);  // Positions
-    expect(gameState.playedCards[0].length).toEqual(9);  // Flags
+    expect(gameState.playedCards.length).toEqual(9);  // Cards
+    expect(gameState.playedCards[0].length).toEqual(2);  // Positions
     expect(gameState.playedCards[0][0].length).toEqual(0);  // Cards
 
     expect(gameState.playedCards).toEqual([
-      // North
-      [
-        [], // Flag 1
-        [], // Flag 2
-        [], // Flag 3
-        [], // Flag 4
-        [], // Flag 5
-        [], // Flag 6
-        [], // Flag 7
-        [], // Flag 8
-        [], // Flag 9
-      ],
-      // South
-      [
-        [], // Flag 1
-        [], // Flag 2
-        [], // Flag 3
-        [], // Flag 4
-        [], // Flag 5
-        [], // Flag 6
-        [], // Flag 7
-        [], // Flag 8
-        [], // Flag 9
-      ],
+      [[], []], // Flag 1
+      [[], []], // Flag 2
+      [[], []], // Flag 3
+      [[], []], // Flag 4
+      [[], []], // Flag 5
+      [[], []], // Flag 6
+      [[], []], // Flag 7
+      [[], []], // Flag 8
+      [[], []], // Flag 9
     ]);
   });
 });
