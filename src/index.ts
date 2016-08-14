@@ -1,7 +1,8 @@
 import * as readline from "readline";
-import {CommandParser, BattlelineEvent, Position, Card} from "./command_parser";
+import {CommandParser} from "./command_parser";
 import {StrategyRunner} from "./strategy_runner";
 import {RandomStrategy} from "./random_strategy";
+import {Card, BattlelineEvent, Position} from "./game_state";
 
 // Parse all commands as the enter the system
 const commandParser = new CommandParser();

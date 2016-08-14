@@ -1,7 +1,6 @@
 import {StrategyRunner} from "./strategy_runner";
-import {Position, Card} from "./command_parser";
 import {RandomStrategy} from "./random_strategy";
-
+import {Card, Position} from "./game_state";
 
 describe("Strategy Runner", () => {
   let strategyRunner;

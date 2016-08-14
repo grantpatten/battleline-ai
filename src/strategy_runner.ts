@@ -1,4 +1,4 @@
-import {Position, Card} from "./command_parser";
+import {Card, Position} from "./game_state";
 import {GameState} from "./game_state";
 
 export interface IStrategy {

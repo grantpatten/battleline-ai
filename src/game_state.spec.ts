@@ -1,6 +1,5 @@
 import {GameState} from "./game_state";
-import {Position, Card} from "./command_parser";
-
+import {Card, Position} from "./game_state";
 
 describe("Game State", () => {
   let gameState;

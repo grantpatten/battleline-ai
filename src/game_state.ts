@@ -1,8 +1,36 @@
 import * as _ from "lodash";
 
-import {Card, Position} from "./command_parser";
+export const FLAG_COUNT = 9;
 
-const FLAG_COUNT = 9;
+export enum Position {
+  north,
+  south,
+  unclaimed
+}
+
+export enum BattlelineEvent {
+  NameRequest, // player <north|south> name
+  Colors,  // colors <color1> * 6
+  Hand,  // player <north|south> hand <card1> * 7
+  Claim,  // flag claim-status <unclaimed|north|south> * 9
+  Flag,  // flag <1-9> cards <north|south> <card1> * 3 (optional)
+  Play  // go play-card -> play <1-9> <card>
+}
+
+// Card message format:
+export class Card {
+  constructor(public color: string, public rank: number) {
+  };
+
+  toString() {
+    return `${this.color},${this.rank}`;
+  }
+
+  static parse(card: string) {
+    let [color, rankString] = card.split(",");
+    return new Card(color, parseInt(rankString));
+  }
+}
 
 export class GameState {
   public deck: Card[];
