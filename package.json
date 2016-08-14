@@ -9,7 +9,8 @@
     "lint": "tslint src/**/*.ts spec/**/*.ts",
     "typings": "typings install",
     "test": "istanbul cover jasmine-runner.js",
-    "postinstall": "npm run typings && npm run build"
+    "postinstall": "npm run typings && npm run build",
+    "coverage:remap": "remap-istanbul -i ./coverage/coverage.json -o ./coverage/typescript_lcov.info -t lcovonly -e jasmine-runner.js"
   },
   "repository": {
     "type": "git",
