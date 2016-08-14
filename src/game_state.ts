@@ -14,7 +14,7 @@ export class GameState {
       this.playedCards[position] = [];
 
       for (let flag = 0; flag < 9; flag++) {
-        this.playedCards[position][flag] = [null, null, null];
+        this.playedCards[position][flag] = [];
       }
     }
   };
