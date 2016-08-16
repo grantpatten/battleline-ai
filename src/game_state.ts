@@ -56,4 +56,25 @@ export class GameState {
     return this.claims[flag] === Position.unclaimed &&
       this.playedCards[flag][this.playerPosition].length < 3;
   }
+
+  nextState(flag: number, card: Card): GameState {
+    let newState = new GameState();
+
+    newState.deck = this.deck;
+    newState.claims =  this.claims;
+    newState.playerPosition = this.playerPosition;
+    newState.colors = this.colors;
+
+    // Update the played cards
+    newState.playedCards =  _.cloneDeep(newState.playedCards);
+    newState.playedCards[flag][newState.playerPosition].push(card);
+
+    // Update the player cards
+    newState.playerCards = _.clone(this.playerCards);
+    _.remove(newState.playerCards, card);
+
+    // TODO - Calculate if we have any new claims
+
+    return newState;
+  }
 }

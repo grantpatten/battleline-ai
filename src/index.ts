@@ -1,14 +1,21 @@
 import * as readline from "readline";
 import {CommandParser} from "./command_parser";
-import {StrategyRunner} from "./strategy_runner";
+import {StrategyRunner, IStrategy} from "./strategy_runner";
 import {RandomStrategy} from "./random_strategy";
+import {HeuristicStrategy} from "./heuristic_strategy";
+import {BasicHeuristic} from "./heuristics";
 import {Card, BattlelineEvent, Position} from "./game_state";
 
 // Parse all commands as the enter the system
 const commandParser = new CommandParser();
 
 // Configure the strategies
-const strategy = new RandomStrategy();
+const basicHeuristic = new BasicHeuristic();
+let strategy: IStrategy;
+
+// strategy = new RandomStrategy();
+strategy = new HeuristicStrategy(basicHeuristic);
+
 const strategyRunner = new StrategyRunner(strategy);
 
 // Connect the strategy runner to incoming commands
